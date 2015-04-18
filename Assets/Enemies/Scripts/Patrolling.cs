@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Patrolling : MonoBehaviour {
+	public bool isMoving = true;
 	public float speed = 5.0f;
 	public bool isMovingLeft = true;
 
@@ -11,16 +12,21 @@ public class Patrolling : MonoBehaviour {
 	float t;
 
 	void Start() {
-		if (startPoint.x > endPoint.x) {
-			Vector3 swap = startPoint;
-			startPoint = endPoint;
-			endPoint = swap;
+		if (endPoint.x == startPoint.x) {
+			isMoving = false;
 		}
 
-		t = (transform.position.x - startPoint.x) / endPoint.x;
+		if (isMoving) {
+			endPoint.x -= startPoint.x;
+			t = (transform.position.x - startPoint.x) / endPoint.x;
+		}
 	}
 
 	void Update() {
+		if (!isMoving) {
+			return;
+		}
+
 		if (isMovingLeft) {
 			t -= speed * Time.deltaTime / Mathf.Abs(endPoint.x - startPoint.x);
 			if (t <= 0.0f) {

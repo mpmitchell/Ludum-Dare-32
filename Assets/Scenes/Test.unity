@@ -174,6 +174,7 @@ GameObject:
   - 61: {fileID: 1197930507}
   - 50: {fileID: 1197930506}
   - 114: {fileID: 1197930511}
+  - 114: {fileID: 1197930512}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -247,7 +248,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1197930505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.60000002, y: 0, z: 0}
+  m_LocalPosition: {x: .829999983, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -263,10 +264,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f681ccfe7f952e04eacc9ad804221ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 1
   speed: 3
   isMovingLeft: 1
-  startPoint: {x: 0, y: 0, z: 0}
-  endPoint: {x: 4.46460724, y: 0, z: 0}
+  startPoint: {x: -1.77999997, y: 0, z: 0}
+  endPoint: {x: 4.21000004, y: 0, z: 0}
+--- !u!114 &1197930512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197930505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773e47f86d72cda42b0d670adf0d82ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576322391
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +495,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1943842712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6500001, y: 0, z: 0}
+  m_LocalPosition: {x: -3.86999989, y: .370000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
