@@ -18,10 +18,11 @@ public class GunScript : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown (0))
 		{
+			player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 			mPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Vector2 ForceVector =(mPosition - player.transform.position).normalized;
-			Debug.Log (ForceVector.normalized*100*-1);
-			player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*40*-1);
+			Debug.Log (ForceVector.normalized*50*-1);
+			player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*50*-1);
 		} 
 	}
 }
