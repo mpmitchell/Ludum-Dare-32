@@ -20,9 +20,9 @@ public class GunScript : MonoBehaviour {
 		{
 			mPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			Vector2 ForceVector =(mPosition - player.transform.position).normalized;
-			Debug.Log (ForceVector*100*-1);
-			player.GetComponent<Rigidbody2D>().AddForce(ForceVector*180*-1);
+			Debug.Log (ForceVector.normalized*100*-1);
+			player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*40*-1);
 		} 
 	}
 }
-    
+     
