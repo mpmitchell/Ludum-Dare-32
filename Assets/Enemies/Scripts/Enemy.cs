@@ -8,18 +8,16 @@ public class Enemy : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (isAlive && collision.collider.tag.Equals("Player")
 			&& collision.contacts[0].normal == -Vector2.up) {
-			DeathAnimation();
+			// Start death animation
 			isAlive = false;
 		}
 	}
 
-	IEnumerable DeathAnimation() {
-		// TODO: Start death animation
-
-		do {
-			yield return null;
-		} while (deathAnimation.isPlaying);
-
-		Destroy(gameObject);
+	void Update() {
+		if (!isAlive) {
+			if (deathAnimation == null || !deathAnimation.isPlaying) {
+				Destroy(gameObject);
+			}
+		}
 	}
 }
