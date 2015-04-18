@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		Debug.Log("Working");
 		if(other.collider.gameObject.tag == "World")
 		{
 			moveDisabled = false;

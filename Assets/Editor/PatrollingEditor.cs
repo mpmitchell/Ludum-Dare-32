@@ -13,6 +13,11 @@ public class PatrollingEditor : Editor {
 		Handles.color = Color.red;
 		p.endPoint = new Vector3(Handles.Slider(p.endPoint, Vector3.right, 0.3f, Handles.CubeCap, 0.0f).x, p.transform.position.y, p.transform.position.z);
 
+		Handles.BeginGUI();
+		GUI.Box(HandleUtility.WorldPointToSizedRect(p.startPoint, new GUIContent("Patrol start"), GUI.skin.label), "Patrol start");
+		GUI.Box(HandleUtility.WorldPointToSizedRect(p.endPoint, new GUIContent("Patrol end"), GUI.skin.label), "Patrol end");
+		Handles.EndGUI();
+
 		if (p.startPoint.x > p.transform.position.x) {
 			p.startPoint = p.transform.position;
 		}
