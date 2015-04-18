@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-	public Animation deathAnimation;
+	public Animation deathAnimation = null;
 	public bool isAlive = true;
 
 	void OnCollisionEnter2D(Collision2D collision) {

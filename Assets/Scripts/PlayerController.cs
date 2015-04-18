@@ -49,18 +49,18 @@ public class PlayerController : MonoBehaviour {
 
 	} 
 
-	void OnTriggerEnter2D (Collider2D other)
+	void OnCollisionEnter2D (Collision2D other)
 	{
 		Debug.Log("Working");
-		if(other.gameObject.tag == "World")
+		if(other.collider.gameObject.tag == "World")
 		{
 			moveDisabled = false;
 		}
 	}
 
-	void OnTriggerExit2D (Collider2D other)
+	void OnCollisionExit2D (Collision2D other)
 	{
-		if(other.gameObject.tag == "World")
+		if(other.collider.gameObject.tag == "World")
 		{
 			moveDisabled = true;
 		}
