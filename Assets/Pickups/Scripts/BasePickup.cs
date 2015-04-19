@@ -2,13 +2,15 @@
 using System.Collections;
 
 public abstract class BasePickup : MonoBehaviour {
-	public bool isRotating = true;
-	public float rotationalSpeed = 90.0f;
+	[SerializeField] bool isRotating = true;
+	[SerializeField] float rotationalSpeed = 90.0f;
 	
-	public bool isActive = true;
+	protected bool isActive = true;
 
 	void Update() {
-		transform.Rotate(Vector3.up * rotationalSpeed * Time.deltaTime);
+		if (isRotating) {
+			transform.Rotate(Vector3.up * rotationalSpeed * Time.deltaTime);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
@@ -17,7 +19,7 @@ public abstract class BasePickup : MonoBehaviour {
 		}
 	}
 
-	protected virtual IEnumerator DestroyIn(float seconds) {
+	protected IEnumerator DestroyIn(float seconds) {
 		yield return new WaitForSeconds(seconds);
 		Destroy(gameObject);
 	}

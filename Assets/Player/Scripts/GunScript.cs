@@ -2,14 +2,8 @@
 using System.Collections;
 
 public class GunScript : MonoBehaviour {
-
-	public GameObject player;
 	private float timer = 0;
-	// Use this for initialization
-	void Start () {
-		player = GameObject.Find ("Player");
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		timer-= Time.deltaTime;
@@ -22,14 +16,14 @@ public class GunScript : MonoBehaviour {
 		{
 			if (timer<=0){
 
-			player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+			ServiceLocator.player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 			mPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			Vector2 ForceVector =(mPosition - player.transform.position).normalized;
-			player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*60*-1);
-			
+			Vector2 ForceVector =(mPosition - ServiceLocator.player.transform.position).normalized;
+			ServiceLocator.player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*60*-1);
+
 				timer = 1;
 			}
-		} 
+		}
 	}
 }
-     
+

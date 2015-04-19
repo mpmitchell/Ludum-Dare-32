@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class PlayerService : MonoBehaviour {
-
 	void Awake() {
 		if (ServiceLocator.player == null) {
 			ServiceLocator.player = gameObject;

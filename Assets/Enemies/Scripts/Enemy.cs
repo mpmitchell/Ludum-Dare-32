@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-	public Animation deathAnimation = null;
-	public bool isAlive = true;
+	[SerializeField] Animation deathAnimation = null;
+
+	[HideInInspector] public bool isAlive = true;
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (isAlive && collision.collider.tag.Equals("Player")

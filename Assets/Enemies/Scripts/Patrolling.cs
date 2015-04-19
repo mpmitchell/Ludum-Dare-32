@@ -2,12 +2,12 @@
 using System.Collections;
 
 public class Patrolling : MonoBehaviour {
-	public bool isMoving = true;
-	public float speed = 5.0f;
-	public bool isMovingLeft = true;
+	[SerializeField] bool isMoving = true;
+	[SerializeField] float speed = 5.0f;
+	[SerializeField] bool isMovingLeft = true;
 
-	public Vector3 startPoint;
-	public Vector3 endPoint;
+	[HideInInspector] public Vector3 startPoint;
+	[HideInInspector] public Vector3 endPoint;
 
 	Enemy enemy;
 
