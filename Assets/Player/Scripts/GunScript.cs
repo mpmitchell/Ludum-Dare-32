@@ -30,7 +30,7 @@ public class GunScript : MonoBehaviour {
 					ServiceLocator.player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*60*-1);
 
 					timer = 1;
-				}
+				} 
 				}
 			}
 		}
