@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 438020}
   - 212: {fileID: 21208024}
-  - 61: {fileID: 6134820}
   - 50: {fileID: 5025138}
   - 114: {fileID: 11438216}
   - 114: {fileID: 11474470}
+  - 61: {fileID: 6123860}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -47,7 +47,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6134820
+--- !u!61 &6123860
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,7 +88,7 @@ MonoBehaviour:
   speed: 5
   isMovingLeft: 0
   startPoint: {x: -10.1258593, y: 2.45000005, z: 0}
-  endPoint: {x: 6.26918507, y: 2.45000005, z: 0}
+  endPoint: {x: 6.0618825, y: 2.45000005, z: 0}
 --- !u!212 &21208024
 SpriteRenderer:
   m_ObjectHideFlags: 1

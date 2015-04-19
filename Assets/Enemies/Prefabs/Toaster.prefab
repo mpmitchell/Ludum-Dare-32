@@ -331,10 +331,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toast: {fileID: 181024, guid: 0655f936e920c43429c4ffdcfa92443d, type: 2}
-  distanceThreshold: 10
   firePeriod: 5
-  initialVelocity: 30
+  initialVelocity: 35
   toastSpawnPoint: {x: 33.1263351, y: 4.54988241}
+  distanceThreshold: 15.7545853
 --- !u!212 &21202576
 SpriteRenderer:
   m_ObjectHideFlags: 1
