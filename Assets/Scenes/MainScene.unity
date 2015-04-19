@@ -723,6 +723,10 @@ Prefab:
       propertyPath: firePeriod
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11465460, guid: 76ef5422c613f9f40b7bb2cbf44f4925, type: 2}
+      propertyPath: distanceThreshold
+      value: 15.7545853
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ef5422c613f9f40b7bb2cbf44f4925, type: 2}
   m_IsPrefabParent: 0

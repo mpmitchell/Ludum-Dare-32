@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Toaster : MonoBehaviour {
 	[SerializeField] GameObject toast = null;
-	[SerializeField] float distanceThreshold = 10.0f;
 	[SerializeField] float firePeriod = 5.0f;
 	[SerializeField] float initialVelocity = 20.0f;
 	
 	[HideInInspector] public Vector2 toastSpawnPoint;
+	[HideInInspector] public float distanceThreshold = 10.0f;
 
 	float timer = 0.0f;
 
