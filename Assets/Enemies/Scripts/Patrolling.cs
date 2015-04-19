@@ -6,8 +6,8 @@ public class Patrolling : MonoBehaviour {
 	[SerializeField] float speed = 5.0f;
 	[SerializeField] bool isMovingLeft = true;
 
-	[HideInInspector] public Vector3 startPoint;
-	[HideInInspector] public Vector3 endPoint;
+	 public Vector3 startPoint;
+	 public Vector3 endPoint;
 
 	Enemy enemy;
 

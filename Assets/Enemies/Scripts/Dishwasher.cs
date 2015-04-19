@@ -12,12 +12,6 @@ public class Dishwasher : MonoBehaviour {
 	int currentPlate = 0;
 	float timer = 0.0f;
 
-	new Collider2D collider;
-
-	void Start() {
-		collider = GetComponent<Collider2D>();
-	}
-
 	void Update() {
 		if (timer <= 0.0f) {
 			if (currentPlate == plates.Length) {
@@ -28,7 +22,7 @@ public class Dishwasher : MonoBehaviour {
 				currentPlate = 0;
 			}
 
-			if (Physics2D.BoxCast(transform.position, collider.bounds.size, 0.0f, -Vector2.right, distanceThreshold, (1 << 9)).collider != null) {
+			if (Physics2D.BoxCast(plates[currentPlate].transform.position, plates[currentPlate].GetComponent<Collider2D>().bounds.size, 0.0f, -Vector2.right, distanceThreshold, (1 << 9)).collider != null) {
 				GameObject plate = (GameObject) Instantiate(plates[currentPlate], plates[currentPlate].transform.position, Quaternion.identity);
 				plate.transform.localScale = transform.localScale;
 				plate.AddComponent<Plate>().speed = plateSpeed;
