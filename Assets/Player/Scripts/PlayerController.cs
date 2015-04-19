@@ -30,10 +30,10 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if (moveRight == true) {
-			transform.Translate(7.0f * Time.deltaTime, 0.0f, 0.0f);
+			transform.Translate(7.0f * Time.fixedDeltaTime, 0.0f, 0.0f);
 		}
 		if (moveLeft == true) {
-			transform.Translate(-7.0f * Time.deltaTime, 0.0f, 0.0f);
+			transform.Translate(-7.0f * Time.fixedDeltaTime, 0.0f, 0.0f);
 		}
 
 		if (Physics2D.BoxCast(transform.position, collider.bounds.size, 0.0f, -Vector2.up, collider.bounds.extents.y, raycastMask).normal == Vector2.up) {
