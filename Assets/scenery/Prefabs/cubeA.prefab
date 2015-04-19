@@ -39,15 +39,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-<<<<<<< HEAD:Assets/scenery/cubeA.prefab
-  m_Offset: {x: .0799942017, y: .279935181}
-  serializedVersion: 2
-  m_Size: {x: 16.3567677, y: 15.7968502}
-=======
   m_Offset: {x: -7.62939453e-06, y: -9.53674316e-07}
   serializedVersion: 2
   m_Size: {x: 17, y: 17}
->>>>>>> origin/master:Assets/scenery/Prefabs/cubeA.prefab
 --- !u!212 &21287510
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -59,7 +53,7 @@ SpriteRenderer:
   m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_SubsetIndices:
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
