@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 	bool moveDisabled = true;
 	int raycastMask = 1 << 8;
 
-	Collider2D collider;
+	new Collider2D collider;
 
 	void Start() {
 		collider = GetComponent<Collider2D>();
