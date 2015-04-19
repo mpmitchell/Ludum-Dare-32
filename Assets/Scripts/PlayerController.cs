@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 	private bool moveLeft = false;
 
 	private bool moveDisabled = true;
-	public int raycastMask = ~(1 << 8);
+	private int raycastMask = ~(1 << 8);
 	//Vector3 colliderOffset;
 	// Use this for initialization
 	void Start () {
@@ -48,21 +48,27 @@ public class PlayerController : MonoBehaviour {
 			transform.Translate(-7.0f*Time.deltaTime, 0.0f, 0.0f);
 		}
 		RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position , GetComponent<Collider2D>().bounds.size, 0.0f, -transform.up, 0.1f, raycastMask);
+
+
 		foreach (RaycastHit2D hit in hits)
+
 		{
+			Debug.Log (hit.collider.tag);
+
+
 			if (hit.collider != null && hit.collider.tag == "World")
 			{
 				Debug.Log ("Move");
 				moveDisabled = false;
 				break;
-			}
-			else
-			{
-				Debug.Log("Stay");
-				moveDisabled = true;
-				break;
-			}
-		}
+			} 
+
+		} 
+
+
+
+
+
 	} 
 
 /*	void OnTriggerEnter2D (Collider2D other)
