@@ -2,42 +2,31 @@
 using System.Collections;
 
 public class GunScript : MonoBehaviour {
-	private float timer = 0;
-	int raycastMask = 1 << 8;
-	// Update is called once per frame
-	void Update () {
-		timer-= Time.deltaTime;
-		Vector3 mPosition = Camera.main.WorldToScreenPoint (transform.position);
-		Vector3 mDirection = Input.mousePosition - mPosition;
-		float angle = Mathf.Atan2 (mDirection.y, mDirection.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+	[SerializeField] float firePeroid = 1.0f;
+	[SerializeField] float maxDistance = 10.0f;
+	[SerializeField] float maxForce = 50.0f;
 
-		if (Input.GetMouseButtonDown (0))
-		{  
-			RaycastHit2D hit = Physics2D.Raycast(transform.position, mDirection, 100, raycastMask);
-		
+	float timer = 0.0f;
 
-			if(hit.distance <=5)
-			{
-				Debug.Log (hit.collider.tag);
-			if(hit != null && hit.collider != null){
+	void Update() {
+		Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		Vector3 direction = mousePosition - transform.position;
 
-				if (timer<=0){
+		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-					ServiceLocator.player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-					mPosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-					Vector2 ForceVector =(mPosition - ServiceLocator.player.transform.position).normalized;
-					ServiceLocator.player.GetComponent<Rigidbody2D>().AddForce(ForceVector.normalized*60*-1);
+		if (timer <= 0.0f) {
+			if (Input.GetButtonDown("Fire1")) {
+				RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100, LayerMask.GetMask("World"));
+				if (hit.distance <= maxDistance) {
+					Vector2 forceVector = (mousePosition - ServiceLocator.player.transform.position).normalized;
+					ServiceLocator.player.GetComponent<Rigidbody2D>().AddForce(-forceVector * maxForce * maxDistance / hit.distance);
 
-					timer = 1;
-				} 
+					timer = firePeroid;
 				}
 			}
+		} else {
+			timer -= Time.deltaTime;
 		}
-		
-		}
-
-
 	}
-
-
+}
