@@ -32,6 +32,8 @@ public class Dishwasher : MonoBehaviour {
 				damage.damage = plateDamage;
 				damage.knockback = plateKnockback;
 
+				GetComponent<AudioSource>().Play();
+
 				plates[currentPlate].SetActive(false);
 
 				currentPlate++;

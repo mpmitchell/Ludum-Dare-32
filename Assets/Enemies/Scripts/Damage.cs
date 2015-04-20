@@ -16,7 +16,12 @@ public class Damage : MonoBehaviour {
 		if (collision.collider.tag.Equals("Player") &&
 			(topTrigger || !topTrigger && collision.contacts[0].normal != -Vector2.up)) {
 			health.health -= damage;
+
 			collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(-collision.contacts[0].normal * knockback);
+			if(gameObject.tag=="Car")
+			{
+				GetComponent<AudioSource>().Play();
+			}
 		}
 	}
 }

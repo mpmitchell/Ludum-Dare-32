@@ -11,11 +11,15 @@ public class Toaster : MonoBehaviour {
 
 	float timer = 0.0f;
 
+
 	void Update() {
 		float distance = Vector3.Distance(transform.position, Player.player.transform.position);
 
 		if (timer <= 0.0f) {
 			if (distance <= distanceThreshold) {
+
+
+				GetComponent<AudioSource>().Play ();
 				GameObject newToast = (GameObject) Instantiate(toast, toastSpawnPoint, Quaternion.identity);
 				newToast.GetComponent<Rigidbody2D>().velocity = Vector3.up * initialVelocity;
 				timer += firePeriod;
@@ -25,3 +29,4 @@ public class Toaster : MonoBehaviour {
 		}
 	}
 }
+  
