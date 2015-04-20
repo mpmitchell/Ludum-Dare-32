@@ -2,18 +2,34 @@
 using System.Collections;
 
 public class Toast : MonoBehaviour {
+	[SerializeField] float timeOut = 1.0f;
+
 	bool isAlive = true;
-	Rigidbody2D rigidBody;
+	float timer = 0.0f;
+
+	new Rigidbody2D rigidbody;
 
 	void Start() {
-		rigidBody = GetComponent<Rigidbody2D>();
+		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		if (rigidBody.velocity.y <= 1.0f && collision.collider.name.Equals("Toaster")) {
+		if (rigidbody.velocity.y <= 1.0f && collision.collider.name.Equals("Toaster")) {
 			GetComponent<Collider2D>().enabled = false;
 			isAlive = false;
 		}
+	}
+
+	void OnCollisionStay2D(Collision2D collision) {
+		timer += Time.deltaTime;
+		if (timer > timeOut) {
+			GetComponent<Collider2D>().enabled = false;
+			isAlive = false;
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D collision) {
+		timer = 0.0f;
 	}
 
 	void Update() {

@@ -817,11 +817,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456928, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
       propertyPath: m_LocalScale.y
-      value: .349999994
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 111606, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
       propertyPath: m_Name
       value: Dishwasher
+      objectReference: {fileID: 0}
+    - target: {fileID: 456928, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
@@ -3555,7 +3559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456928, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
       propertyPath: m_LocalScale.x
-      value: -.400000006
+      value: .400000006
       objectReference: {fileID: 0}
     - target: {fileID: 11443934, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
       propertyPath: plateSpeed
@@ -3563,7 +3567,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456928, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
       propertyPath: m_LocalScale.y
-      value: .349999994
+      value: .400000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcda548d255cd3b44a74073a1b7da792, type: 2}
