@@ -323,6 +323,8 @@ MonoBehaviour:
   firePeriod: 3
   reloadTime: 5
   plateSpeed: 7
+  plateDamage: 20
+  plateKnockback: 50
   distanceThreshold: 12.6729851
 --- !u!114 &11455034
 MonoBehaviour:

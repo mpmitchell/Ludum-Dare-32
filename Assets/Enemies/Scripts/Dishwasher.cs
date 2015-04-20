@@ -6,6 +6,8 @@ public class Dishwasher : MonoBehaviour {
 	[SerializeField] float firePeriod = 3.0f;
 	[SerializeField] float reloadTime = 5.0f;
 	[SerializeField] float plateSpeed = 5.0f;
+	[SerializeField] int plateDamage;
+	[SerializeField] float plateKnockback;
 
 	[HideInInspector] public float distanceThreshold = 10.0f;
 
@@ -26,6 +28,9 @@ public class Dishwasher : MonoBehaviour {
 				GameObject plate = (GameObject) Instantiate(plates[currentPlate], plates[currentPlate].transform.position, Quaternion.identity);
 				plate.transform.localScale = transform.localScale;
 				plate.AddComponent<Plate>().speed = plateSpeed;
+				Damage damage = plate.AddComponent<Damage>();
+				damage.damage = plateDamage;
+				damage.knockback = plateKnockback;
 
 				plates[currentPlate].SetActive(false);
 
