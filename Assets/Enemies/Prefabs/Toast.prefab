@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df39f44714838a44a9320f3a41fc805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topTrigger: 0
+  topTrigger: 1
   damage: 20
   knockback: 50
 --- !u!212 &21275382
