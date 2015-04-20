@@ -27,6 +27,7 @@ public class GunScript : MonoBehaviour {
 			if (Input.GetButtonDown("Fire1")) {
 				RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100, LayerMask.GetMask("World"));
 				if (hit.distance <= maxDistance) {
+					GetComponent<AudioSource>().Play();
 					Vector2 forceVector = mousePosition - ServiceLocator.player.transform.position;
 					rigidbody.AddForce(-forceVector.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
