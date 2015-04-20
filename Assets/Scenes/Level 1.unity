@@ -851,7 +851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: endPoint.x
-      value: 122.622993
+      value: 121.419968
       objectReference: {fileID: 0}
     - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: endPoint.y
@@ -1274,19 +1274,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: startPoint.x
-      value: -12.1000004
+      value: -8.04758835
       objectReference: {fileID: 0}
     - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: startPoint.y
-      value: 2.5
+      value: 2.45000029
       objectReference: {fileID: 0}
     - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: endPoint.y
-      value: 2.5
+      value: 2.45000029
       objectReference: {fileID: 0}
     - target: {fileID: 11446394, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
       propertyPath: knockback
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11474470, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}
+      propertyPath: endPoint.x
+      value: 7.92085838
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd7c01babc2232d4e9c09fb3a66ce216, type: 2}

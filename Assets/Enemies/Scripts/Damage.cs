@@ -9,7 +9,7 @@ public class Damage : MonoBehaviour {
 	Health health;
 
 	void Start() {
-		health = ServiceLocator.player.GetComponent<Health>();
+		health = Player.player.GetComponent<Health>();
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {

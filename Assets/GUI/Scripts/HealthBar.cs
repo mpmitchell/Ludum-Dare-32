@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour {
 	bool isAlive = true;
 
 	void Start() {
-		health = ServiceLocator.player.GetComponent<Health>();
+		health = Player.player.GetComponent<Health>();
 	}
 
 	void Update() {

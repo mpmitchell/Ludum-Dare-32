@@ -12,7 +12,7 @@ public class GunScript : MonoBehaviour {
 	AudioSource audioSource;
 
 	void Start() {
-		rigidbody = ServiceLocator.player.GetComponent<Rigidbody2D>();
+		rigidbody = Player.player.GetComponent<Rigidbody2D>();
 		audioSource = GetComponent<AudioSource>();
 	}
 
@@ -30,7 +30,7 @@ public class GunScript : MonoBehaviour {
 				RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100, LayerMask.GetMask("World"));
 				if (hit.distance <= maxDistance) {
 					audioSource.Play();
-					Vector2 forceVector = mousePosition - ServiceLocator.player.transform.position;
+					Vector2 forceVector = mousePosition - Player.player.transform.position;
 					rigidbody.AddForce(-forceVector.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
 					timer = firePeroid;

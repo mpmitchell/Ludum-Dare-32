@@ -12,7 +12,7 @@ public class Toaster : MonoBehaviour {
 	float timer = 0.0f;
 
 	void Update() {
-		float distance = Vector3.Distance(transform.position, ServiceLocator.player.transform.position);
+		float distance = Vector3.Distance(transform.position, Player.player.transform.position);
 
 		if (timer <= 0.0f) {
 			if (distance <= distanceThreshold) {
