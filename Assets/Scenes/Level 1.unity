@@ -208,7 +208,7 @@ Transform:
   m_RootOrder: 0
 --- !u!1 &96946590 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 115988, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabParentObject: {fileID: 178532, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
   m_PrefabInternal: {fileID: 1470956552}
 --- !u!1001 &278068976
 Prefab:
@@ -374,7 +374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443382, guid: 09d2d1faf03300d4d985442e25931e90, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11497738, guid: 09d2d1faf03300d4d985442e25931e90, type: 2}
       propertyPath: gameOver
@@ -747,7 +747,7 @@ Transform:
   - {fileID: 1366255047}
   - {fileID: 1700685249}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &520154789
 Prefab:
   m_ObjectHideFlags: 0
@@ -1454,6 +1454,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af11e5f1bb0b914429defe3bbc297826, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1053423999 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 115988, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1470956552}
 --- !u!1 &1211992747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,13 +2066,17 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1394389125}
-    - target: {fileID: 115988, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1470956555 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 181344, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1470956552}
+--- !u!1 &1470956556 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 185750, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1470956552}
 --- !u!1 &1473719515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,6 +3290,7 @@ GameObject:
   - 33: {fileID: 2022216008}
   - 23: {fileID: 2022216007}
   - 61: {fileID: 2022216006}
+  - 114: {fileID: 2022216009}
   m_Layer: 8
   m_Name: Floor 29
   m_TagString: Untagged
@@ -3345,6 +3354,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022216004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2022216009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022216004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5b8506afb505e428ba0330292d3032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 1470956556}
+  levelComplete: {fileID: 1053423999}
+  pauseButton: {fileID: 1470956555}
 --- !u!1 &2094031176
 GameObject:
   m_ObjectHideFlags: 0

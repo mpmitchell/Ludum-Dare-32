@@ -1279,6 +1279,7 @@ GameObject:
   - 33: {fileID: 888507701}
   - 23: {fileID: 888507700}
   - 61: {fileID: 888507699}
+  - 114: {fileID: 888507702}
   m_Layer: 8
   m_Name: Floor 23
   m_TagString: Untagged
@@ -1345,6 +1346,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 888507697}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &888507702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888507697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5b8506afb505e428ba0330292d3032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 2112174421}
+  levelComplete: {fileID: 2112174420}
+  pauseButton: {fileID: 2112174422}
 --- !u!1 &957457194
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2806,7 @@ Transform:
   - {fileID: 38014630}
   - {fileID: 1907710043}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1612256830
 GameObject:
   m_ObjectHideFlags: 0
@@ -4001,6 +4016,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2112174420 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 115988, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 2112174419}
+--- !u!1 &2112174421 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 185750, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 2112174419}
+--- !u!1 &2112174422 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 181344, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 2112174419}
 --- !u!1 &2117906418
 GameObject:
   m_ObjectHideFlags: 0

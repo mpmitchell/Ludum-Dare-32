@@ -1517,6 +1517,7 @@ GameObject:
   - 33: {fileID: 873677465}
   - 23: {fileID: 873677464}
   - 61: {fileID: 873677463}
+  - 114: {fileID: 873677467}
   m_Layer: 8
   m_Name: Cube 25
   m_TagString: Untagged
@@ -1580,6 +1581,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1246871962}
   m_RootOrder: 0
+--- !u!114 &873677467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 873677462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5b8506afb505e428ba0330292d3032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 1194399091}
+  levelComplete: {fileID: 1194399092}
+  pauseButton: {fileID: 1194399093}
 --- !u!1 &873808527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2310,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1194399091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 185750, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1194399090}
+--- !u!1 &1194399092 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 115988, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1194399090}
+--- !u!1 &1194399093 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 181344, guid: 663f5d4f0ddb65d40a2b24f23f504940, type: 2}
+  m_PrefabInternal: {fileID: 1194399090}
 --- !u!1 &1246871961
 GameObject:
   m_ObjectHideFlags: 0
