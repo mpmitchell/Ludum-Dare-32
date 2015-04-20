@@ -55,7 +55,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 181024}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df39f44714838a44a9320f3a41fc805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  topTrigger: 0
   damage: 20
   knockback: 50
 --- !u!212 &21275382

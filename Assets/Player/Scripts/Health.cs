@@ -6,6 +6,7 @@ public class Health : MonoBehaviour {
 
 	void Update() {
 		if (health <= 0) {
+			Debug.Log("Load GameOver");
 			// Game Over
 		}
 	}
