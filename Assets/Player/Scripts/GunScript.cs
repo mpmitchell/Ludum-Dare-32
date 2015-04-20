@@ -9,9 +9,11 @@ public class GunScript : MonoBehaviour {
 	float timer = 0.0f;
 
 	new Rigidbody2D rigidbody;
+	AudioSource audioSource;
 
 	void Start() {
 		rigidbody = ServiceLocator.player.GetComponent<Rigidbody2D>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update() {
@@ -27,7 +29,7 @@ public class GunScript : MonoBehaviour {
 			if (Input.GetButtonDown("Fire1")) {
 				RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 100, LayerMask.GetMask("World"));
 				if (hit.distance <= maxDistance) {
-					GetComponent<AudioSource>().Play();
+					audioSource.Play();
 					Vector2 forceVector = mousePosition - ServiceLocator.player.transform.position;
 					rigidbody.AddForce(-forceVector.normalized * force * Time.deltaTime, ForceMode2D.Impulse);
 
